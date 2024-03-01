@@ -165,7 +165,7 @@ class TexturalFilter():
 
         else:
             # Create the final volume to store the results
-            input_images = np.zeros((input_images.shape[0], input_images.shape[1], input_images.shape[2], 25), dtype=np.float32)
+            input_images = np.zeros((input_images.shape[0], input_images.shape[1], input_images.shape[2], 5), dtype=np.float32)
 
             # Fill with nan
             input_images[:] = np.nan
