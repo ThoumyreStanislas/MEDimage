@@ -1,0 +1,67 @@
+{
+  "pre_radiomics_checks" : {
+    "path_data" : "result/",
+    "wildcards_dimensions" : [
+      "STS-IBSI-009__T1scan.npy"
+    ],
+    "path_csv" : "",
+    "wildcards_window" : [
+      "STS-IBSI-009__T1scan.npy"
+    ],
+    "path_save_checks" : ""
+  },
+  "n_batch" : 16,
+  "roi_type_labels" : [
+    "GTV_MassMR"
+  ],
+  "roi_types" : [
+    "GTVp"
+  ],
+  "imParamMR" : {
+    "box_string": "box10",
+    "interp" : {
+      "scale_non_text" : [2, 2, 3],
+      "scale_text" : [[2, 2, 3]],
+      "vol_interp" : "linear",
+      "gl_round" : 1,
+      "roi_interp" : "linear",
+      "roi_pv" : 0.5
+    },
+    "reSeg" : {
+      "range" : [-500, "inf"],
+      "outliers" : ""
+    },
+    "discretisation" : {
+      "IH" : {
+        "type" : "FBS",
+        "val" : 25
+      },
+      "IVH" : {
+
+      },
+      "texture" : {
+        "type" : ["FBS"],
+        "val" : [[100]]
+      }
+      },
+      "ngtdm" : {
+        "dist_correction" : false
+      },
+      "filter_type": "textural",
+      "intensity_type": ""
+    },
+  "imParamFilter" : {
+    "textural" : {
+      "family" : "ngtdm",
+      "discretization": {
+        "type" : "FBN",
+        "bn" : 5,
+        "bw" : null,
+        "adapted" : false
+      },
+      "size" : 3,
+      "local" : false,
+      "name_save" : "ngtdm_global_fbs_1"
+    }
+  }
+}

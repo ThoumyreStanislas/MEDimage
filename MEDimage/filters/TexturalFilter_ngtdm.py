@@ -8,7 +8,7 @@ from pycuda.autoinit import context
 from pycuda.compiler import SourceModule
 
 from ..processing.discretisation import discretize
-from .textural_filters_kernels_ngtdm import ngtdm_kernel, single_ngtdm_kernel
+from .ngtdm_textural_filter_kernel import ngtdm_kernel
 
 class TexturalFilter():
     """The Textural filter class. This class is used to apply textural filters to an image. The textural filters are
@@ -41,11 +41,11 @@ class TexturalFilter():
         self.size = size
         self.local = local
         self.ngtdm_features = [
-            "Fcm_coarseness",
-            "Fcm_contrast",
-            "Fcm_busyness",
-            "Fcm_complexity",
-            "Fcm_strength"
+            "Fngt_coarseness",
+            "Fngt_contrast",
+            "Fngt_busyness",
+            "Fngt_complexity",
+            "Fngt_strength"
         ]
 
     def __ngtdm_filter(

@@ -26,7 +26,7 @@ dependencies:
     - numpyencoder==0.3.0
     - protobuf==3.17.3
     - pycuda
-    - ray==1.13.0
+    - ray==2.5.1
     - simpleitk==2.0.2
     - sphinx==5.1.1
     - sphinx-autodoc-typehints==1.19.2

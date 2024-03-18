@@ -6,7 +6,7 @@ from .gabor import *
 from .laws import *
 from .log import *
 from .mean import *
-from .TexturalFilter import TexturalFilter
+from .TexturalFilter_ngtdm import TexturalFilter
 from .wavelet import *
 
 
